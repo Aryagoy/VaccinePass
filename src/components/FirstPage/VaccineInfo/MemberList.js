@@ -32,16 +32,14 @@ function MemberList(props) {
 
   return (
     <React.Fragment>
-      <Route path={`/${params.memberName}`}>
+      <Route path={`/name/${params.memberName}`}>
         <VaccineInfo
           name={detailFound.name}
           date1={detailFound.date1}
           Manufacturer={detailFound.Manufacturer}
           Lotnumber={detailFound.Lotnumber}
-          Location={detailFound.Location}
-        
+          Location={detailFound.Location} 
         />
-
       </Route>
     </React.Fragment>
   );

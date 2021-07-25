@@ -1,27 +1,29 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import AboutPage from "./AboutPage";
-//import VaccineInfo from "./components/FirstPage/VaccineInfo/VaccineInfo";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NavigationBar from "./components/FirstPage/NavBar/NavigationBar";
-import MemberList from "./components/FirstPage/VaccineInfo/MemberList";
-import FrequentlyAskedQuestion from './components/FirstPage/FrequentlyAskedQuestions/FrequentlyAskedQuestions'
+//import { PDFViewer } from '@react-pdf/renderer';
+import QrCode from "./components/VaccinePass/QrCode";
+//import PassPdf from "./components/VaccinePass/PassPdf";
+
+import VaccineDetails from "./VaccineDetails";
 function App() {
- 
 
   return (
     <React.Fragment>
       <Route path="/window">
-        <AboutPage></AboutPage>
+        <AboutPage />
       </Route>
-      <NavigationBar></NavigationBar>
-
-
-
-      <Route path="/:memberName">
-      <MemberList></MemberList>
+      <Route path="/name/:memberName">
+        <VaccineDetails/>
       </Route>
-     <FrequentlyAskedQuestion></FrequentlyAskedQuestion>
+
+      <Route path="/qr">
+        <QrCode />
+      </Route>
+      {/* <Route path="/details">
+<PassPdf />
+</Route> */}
       
     </React.Fragment>
   );

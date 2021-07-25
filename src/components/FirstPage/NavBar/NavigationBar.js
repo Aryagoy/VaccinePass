@@ -11,7 +11,7 @@ import Logo from "../../../assets/logo.jpg";
 
 import classes from "./NavigationBar.module.css";
 
-function NavigationBar(props) {
+function NavigationBar() {
   return (
     <React.Fragment>
       <Navbar
@@ -51,7 +51,7 @@ function NavigationBar(props) {
           </svg>
           <span>Help</span>
         </NavItem>
-        <Dropdown className="d-inline mx-2" autoClose="inside">
+        <Dropdown className="d-inline mx-2" autoclose="inside">
           <Dropdown.Toggle
             variant="outline-primary"
             id="dropdown-autoclose-inside"
